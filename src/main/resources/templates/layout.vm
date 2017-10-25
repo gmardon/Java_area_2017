@@ -20,7 +20,8 @@
         <link href="vendors/bower_components/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet"/>
 
         <!-- Site CSS -->
-        <link href="css/app-1.min.css" rel="stylesheet"/>
+        <link href="css/app-1.min.css" rel="stylesheet"/>œ
+        <link href="css/custom.css" rel="stylesheet"/>
 
         <!-- Page loader -->
         <script src="js/page-loader.min.js"></script>
