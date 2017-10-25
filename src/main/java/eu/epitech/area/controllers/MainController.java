@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MainController {
     @RequestMapping("/")
-    public String dashboard(String name, Model model) {
+    public String dashboard(Model model) {
         model.addAttribute("test", "Hello World !");
         return "dashboard";
     }
