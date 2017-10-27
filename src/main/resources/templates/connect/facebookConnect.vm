@@ -1,0 +1,3 @@
+<form action="/connect/facebook" method="POST">
+    <button class="btn btn-default btn-primary" type="submit">Connect to Facebook</button>
+</form>

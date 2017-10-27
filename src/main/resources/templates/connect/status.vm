@@ -1,0 +1,55 @@
+<div class="card widget-profile">
+    <div class="card__header card__header--highlight text-center">
+        <h2>Connect with some social network</h2>
+    </div>
+
+    <div class="list-group list-group--striped">
+        <div class="list-group-item media">
+            <div class="pull-left">
+                <div class="avatar-char"><i class="zmdi zmdi-twitter"></i></div>
+            </div>
+            <div class="media-body">
+                <form action="/connect/twitter" method="POST">
+                    <button class="btn btn-default btn-primary" type="submit">Connect to Twitter</button>
+                </form>
+            </div>
+        </div>
+        <div class="list-group-item media">
+            <div class="pull-left">
+                <div class="avatar-char"><i class="zmdi zmdi-phone"></i></div>
+            </div>
+            <div class="media-body">
+                <div class="list-group__heading">011 55694785</div>
+                <small class="list-group__text">Home</small>
+            </div>
+        </div>
+        <div class="list-group-item media">
+            <div class="pull-left">
+                <div class="avatar-char"><i class="zmdi zmdi-email"></i></div>
+            </div>
+            <div class="media-body">
+                <div class="list-group__heading">m-hollaway@gmail.com</div>
+                <small class="list-group__text">Email</small>
+            </div>
+        </div>
+        <div class="list-group-item media">
+            <div class="pull-left">
+                <div class="avatar-char"><i class="zmdi zmdi-facebook"></i></div>
+            </div>
+            <div class="media-body">
+                <form action="/connect/facebook" method="POST">
+                    <button class="btn btn-default btn-primary" type="submit">Connect to Facebook</button>
+                </form>
+            </div>
+        </div>
+        <div class="list-group-item media">
+            <div class="pull-left">
+                <div class="avatar-char"><i class="zmdi zmdi-github"></i></div>
+            </div>
+            <div class="media-body">
+                <div class="list-group__heading">github.com/hollaway</div>
+                <small class="list-group__text">Github</small>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,7 @@
 package eu.epitech.area;
 
 public abstract class Action {
-    private String _name;
+    private String name;
+
+     abstract boolean check();
 }
