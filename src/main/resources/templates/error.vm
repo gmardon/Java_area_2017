@@ -1,1 +1,8 @@
-ERROR
+#set( $layout = "auth_layout.vm" )
+
+<div class="page-error">
+    <div class="page-error__inner">
+        <h2>${status}</h2>
+        <p>${error}</p>
+    </div>
+</div>
