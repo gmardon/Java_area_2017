@@ -1,10 +1,11 @@
 package eu.epitech.area.controllers;
 
-import eu.epitech.area.service.SecurityService;
 import eu.epitech.area.User;
+import eu.epitech.area.service.SecurityService;
 import eu.epitech.area.service.UserService;
 import eu.epitech.area.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -35,6 +36,7 @@ public class AuthController {
         userValidator.validate(userForm, bindingResult);
 
         if (bindingResult.hasErrors()) {
+            model.addAttribute("errors", bindingResult.getAllErrors());
             return "register";
         }
 
@@ -42,16 +44,19 @@ public class AuthController {
 
         securityService.autologin(userForm.getUsername(), userForm.getPasswordConfirm());
 
-        return "redirect:/dashboard";
+        return "redirect:/";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String login(Model model, String error, String logout) {
+        //if (SecurityContextHolder.getContext().getAuthentication().i)
+        //    return "redirect:/";
+
         if (error != null)
             model.addAttribute("error", "Your username and password is invalid.");
 
         if (logout != null)
-            model.addAttribute("message", "You have been logged out successfully.");
+            model.addAttribute("error", "You have been logged out successfully.");
 
         return "login";
     }

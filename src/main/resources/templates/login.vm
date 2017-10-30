@@ -22,6 +22,9 @@
                     <i class="form-group__bar"></i>
                 </div>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                #if ($error)
+                    <span class="help-block">${error}</span>
+                #end
                 <button class="btn btn--light btn--icon m-t-15"><i class="zmdi zmdi-long-arrow-right"></i></button>
             </div>
         </form>

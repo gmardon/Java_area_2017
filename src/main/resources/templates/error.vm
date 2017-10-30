@@ -2,7 +2,7 @@
 
 <div class="page-error">
     <div class="page-error__inner">
-        <h2>${status}</h2>
-        <p>${error}</p>
+        <h3>${error}</h3>
+        <p>${message}</p>
     </div>
 </div>
