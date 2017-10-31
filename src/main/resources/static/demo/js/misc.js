@@ -1,7 +1,7 @@
 'use strict';
 
 var animationDuration;
-
+/*
 $(window).load(function(){
     //Welcome Message (not for login page)
     function notify(message, type){
@@ -32,7 +32,7 @@ $(window).load(function(){
         notify('Welcome back Mallinda Hollaway', '-light');
     }
 });
-
+*/
 $(document).ready(function() {
     /*--------------------------------------
         Animation
