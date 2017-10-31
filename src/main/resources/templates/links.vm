@@ -1,361 +1,422 @@
-<div class="row">
-    <div class="col-md-4 col-sm-6">
-        <div class="card animation-demo">
-            <div class="card__header">
-                <h2>Attention Seekers <small>Click on the buttons below to start the animation</small></h2>
-            </div>
-
-            <div class="card__body">
-                <img src="demo/img/headers/sm/1.png" alt="">
-
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">bounce</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">flash</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">pulse</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rubberBand</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">shake</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">swing</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">tada</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">wobble</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card animation-demo">
-            <div class="card__header">
-                <h2>Flippers <small>Click on the buttons below to start the animation</small></h2>
-            </div>
-
-            <div class="card__body">
-                <img src="demo/img/headers/sm/6.png" alt="">
-
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">flip</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">flipInX</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">flipInY</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">flipOutX</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">flipOutY</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card animation-demo">
-            <div class="card__header">
-                <h2>Light Speed <small>Click on the buttons below to start the animation</small></h2>
-            </div>
-
-            <div class="card__body">
-                <img src="demo/img/headers/sm/7.png" alt="">
-
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">lightSpeedIn</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">lightSpeedOut</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card animation-demo">
-            <div class="card__header">
-                <h2>Specials <small>Click on the buttons below to start the animation</small></h2>
-            </div>
-
-            <div class="card__body">
-                <img src="demo/img/headers/sm/1.png" alt="">
-
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">hinge</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rollIn</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rollOut</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="content--boxed">
+    <div class="content__header">
+        <h2>Links</h2>
     </div>
 
-    <div class="col-md-4 col-sm-6">
-        <div class="card animation-demo">
-            <div class="card__header">
-                <h2>Bouncing Entrances <small>Click on the buttons below to start the animation</small></h2>
+    <div class="card">
+        <div class="action-header">
+            <div class="action-header__label"></div>
+
+            <div class="actions action-header__actions">
+                <a href="/link/create"><i class="zmdi zmdi-plus"></i></a>
+            </div>
+        </div>
+
+        <div class="list-group list-group--striped">
+            <div class="list-group-item media">
+                <div class="checkbox pull-left list-group__checkbox list-group__checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+
+                <div class="pull-left">
+                    <div class="avatar-char">P</div>
+                </div>
+
+                <div class="pull-right">
+                    <div class="actions">
+                        <div class="dropdown">
+                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Listview Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-body">
+                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id
+                        brute intellegam
+                    </div>
+                    <small class="list-group__text">Quisque non tortor ultricies, posuere elit id, lacinia purus
+                        curabitur.
+                    </small>
+                </div>
             </div>
 
-            <div class="card__body">
-                <img src="demo/img/headers/sm/2.png" alt="">
+            <div class="list-group-item media">
+                <div class="checkbox pull-left list-group__checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
 
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">bounceIn</button>
+                <div class="pull-right">
+                    <div class="actions">
+                        <div class="dropdown">
+                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Listview Settings</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">bounceInDown</button>
+                </div>
+
+                <div class="pull-left">
+                    <div class="avatar-char">D</div>
+                </div>
+
+                <div class="media-body">
+                    <div class="list-group__heading">Dulla vel metus scelerisque ante sollicitudin commodo purus odio
                     </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">bounceInLeft</button>
+                    <small class="list-group__text">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel
+                    </small>
+                </div>
+            </div>
+
+            <div class="list-group-item media">
+                <div class="checkbox pull-left list-group__checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+
+                <div class="pull-right">
+                    <div class="actions">
+                        <div class="dropdown">
+                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Listview Settings</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">bounceInRight</button>
+                </div>
+
+                <div class="pull-left">
+                    <div class="avatar-char">P</div>
+                </div>
+
+                <div class="media-body">
+                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id
+                        brute intellegam
                     </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">bounceInUp</button>
+                    <div class="list-group__attrs">
+                        <div>Date Created: 09/06/1988</div>
+                        <div>Members: 78954</div>
+                        <div>Published: No</div>
                     </div>
+                </div>
+            </div>
+
+            <div class="list-group-item media">
+                <div class="checkbox pull-left list-group__checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+
+                <div class="pull-left">
+                    <div class="avatar-char">D</div>
+                </div>
+
+                <div class="pull-right">
+                    <div class="actions">
+                        <div class="dropdown">
+                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Listview Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-body">
+                    <div class="list-group__heading">Donec congue tempus ligula, varius hendrerit mi hendrerit sit amet.
+                        Duis ac quam sit amet leo feugiat iaculis
+                    </div>
+                    <small class="list-group__text">An erant explicari salutatus duo, sumo doming delicata in cum. Eos
+                        at augue viderer principes
+                    </small>
+
+                    <span class="list-group__attrs">
+                                        <span>Date Created: 09/06/1988</span>
+                                        <span>Members: 78954</span>
+                                        <span>Published: No</span>
+                                    </span>
+                </div>
+            </div>
+
+            <div class="list-group-item media">
+                <div class="checkbox pull-left list-group__checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+
+                <div class="pull-left">
+                    <img class="avatar-img" src="demo/img/profile-pics/1.jpg" alt="">
+                </div>
+
+                <div class="pull-right">
+                    <div class="actions">
+                        <div class="dropdown">
+                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Listview Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-body">
+                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id
+                        brute intellegam
+                    </div>
+                    <small class="list-group__text">Phasellus a ante et est ornare accumsan at vel magnauis blandit
+                        turpis at augue ultricies
+                    </small>
+                </div>
+            </div>
+
+            <div class="list-group-item media">
+                <div class="checkbox pull-left list-group__checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+
+                <div class="pull-left">
+                    <img class="avatar-img" src="demo/img/profile-pics/2.jpg" alt="">
+                </div>
+
+                <div class="pull-right">
+                    <div class="actions">
+                        <div class="dropdown">
+                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Listview Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-body">
+                    <div class="list-group__heading">Wel ea elit iuvaret. Mea labitur definitiones ex, id atqui accusata
+                        vix, vim nibh mandamus ad
+                    </div>
+                    <small class="list-group__text">Wendy create ipsum dolor sit amet, per cu solet docendi ntoenstion
+                    </small>
+
+                    <span class="list-group__attrs">
+                                        <span>Date Created: 09/06/1988</span>
+                                        <span>Members: 78954</span>
+                                        <span>Published: No</span>
+                                    </span>
+                </div>
+            </div>
+
+            <div class="list-group-item media">
+                <div class="checkbox pull-left list-group__checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+
+                <div class="pull-left">
+                    <img class="avatar-img" src="demo/img/profile-pics/3.jpg" alt="">
+                </div>
+
+                <div class="pull-right">
+                    <div class="actions">
+                        <div class="dropdown">
+                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Listview Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-body">
+                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id
+                        brute intellegam
+                    </div>
+
+                    <span class="list-group__attrs">
+                                        <span>Date Created: 11/06/1988</span>
+                                        <span>Members: 212</span>
+                                        <span>Published: Yes</span>
+                                    </span>
+                </div>
+            </div>
+
+            <div class="list-group-item media">
+                <div class="checkbox pull-left list-group__checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+
+                <div class="pull-left">
+                    <img class="avatar-img" src="demo/img/profile-pics/4.jpg" alt="">
+                </div>
+
+                <div class="pull-right">
+                    <div class="actions">
+                        <div class="dropdown">
+                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Listview Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-body">
+                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id
+                        brute intellegam
+                    </div>
+                    <small class="list-group__text">Phasellus a ante et est ornare accumsan at vel magnauis blandit
+                        turpis at augue ultricies
+                    </small>
+                </div>
+            </div>
+
+            <div class="list-group-item media">
+                <div class="checkbox pull-left list-group__checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+
+                <div class="pull-right">
+                    <div class="actions">
+                        <div class="dropdown">
+                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Listview Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-body">
+                    <div class="list-group__heading">Dulla vel metus scelerisque ante sollicitudin commodo purus odio
+                    </div>
+                    <small class="list-group__text">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel
+                    </small>
+                </div>
+            </div>
+
+            <div class="list-group-item media">
+                <div class="checkbox pull-left list-group__checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+
+                <div class="pull-right">
+                    <div class="actions">
+                        <div class="dropdown">
+                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Listview Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-body">
+                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id
+                        brute intellegam
+                    </div>
+                    <span class="list-group__attrs">
+                                        <span>Date Created: 09/06/1988</span>
+                                        <span>Members: 78954</span>
+                                        <span>Published: No</span>
+                                    </span>
+                </div>
+            </div>
+
+            <div class="list-group-item media">
+                <div class="checkbox pull-left list-group__checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <i class="input-helper"></i>
+                    </label>
+                </div>
+
+                <div class="pull-right">
+                    <div class="actions">
+                        <div class="dropdown">
+                            <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Listview Settings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-body">
+                    <div class="list-group__heading">Per an error perpetua, fierent fastidii recteque ad pro. Mei id
+                        brute intellegam
+                    </div>
+                    <small class="list-group__text">An erant explicari salutatus duo, sumo doming delicata in cum. Eos
+                        at augue viderer principes
+                    </small>
+
+                    <span class="list-group__attrs">
+                                        <span>Date Created: 09/06/1988</span>
+                                        <span>Members: 78954</span>
+                                        <span>Published: No</span>
+                                    </span>
                 </div>
             </div>
         </div>
 
-        <div class="card animation-demo">
-            <div class="card__header">
-                <h2>Bouncing Exits <small>Click on the buttons below to start the animation</small></h2>
-            </div>
-
-            <div class="card__body">
-                <img src="demo/img/headers/sm/3.png" alt="">
-
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">bounceOut</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">bounceOutDown</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">bounceOutLeft</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">bounceOutRight</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">bounceOutUp</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card animation-demo">
-            <div class="card__header">
-                <h2>Rotating Entrances <small>Click on the buttons below to start the animation</small></h2>
-            </div>
-
-            <div class="card__body">
-                <img src="demo/img/headers/sm/8.png" alt="">
-
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rotateIn</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rotateInDownLeft</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rotateInDownRight</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rotateInUpLeft</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rotateInUpRight</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card animation-demo">
-            <div class="card__header">
-                <h2>Rotating Exits <small>Click on the buttons below to start the animation</small></h2>
-            </div>
-
-            <div class="card__body">
-                <img src="demo/img/headers/sm/9.png" alt="">
-
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rotateOut</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rotateOutDownLeft</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rotateOutDownRight</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rotateOutUpLeft</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">rotateOutUpRight</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4 col-sm-6">
-        <div class="card animation-demo">
-            <div class="card__header">
-                <h2>Fadeing Entrances <small>Click on the buttons below to start the animation</small></h2>
-            </div>
-
-            <div class="card__body">
-                <img src="demo/img/headers/sm/4.png" alt="">
-
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeIn</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeInDown</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeInDownBig</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeInLeft</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeInLeftBig</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeInRight</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeInRightBig</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeInUp</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeInUpBig</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card animation-demo">
-            <div class="card__header">
-                <h2>Fadeing Exits <small>Click on the buttons below to start the animation</small></h2>
-            </div>
-
-            <div class="card__body">
-                <img src="demo/img/headers/sm/5.png" alt="">
-
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeOut</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeOutDown</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeOutDownBig</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeOutLeft</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeOutLeftBig</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeOutRight</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeOutRightBig</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeOutUp</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">fadeOutUpBig</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card animation-demo">
-            <div class="card__header">
-                <h2>Zoom Entrances <small>Click on the buttons below to start the animation</small></h2>
-            </div>
-
-            <div class="card__body">
-                <img src="demo/img/headers/sm/4.png" alt="">
-
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">zoomIn</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">zoomInDown</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">zoomInLeft</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">zoomInRight</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">zoomInUp</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card animation-demo">
-            <div class="card__header">
-                <h2>Zoom Exits <small>Click on the buttons below to start the animation</small></h2>
-            </div>
-
-            <div class="card__body">
-                <img src="demo/img/headers/sm/3.png" alt="">
-
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">zoomOut</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">zoomOutDown</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">zoomOutLeft</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">zoomOutRight</button>
-                    </div>
-                    <div class="col-xs-6">
-                        <button class="btn btn--light">zoomOutUp</button>
-                    </div>
-                </div>
-            </div>
+        <div class="text-center p-30">
+            <ul class="pagination">
+                <li><a href=""><i class="zmdi zmdi-long-arrow-left"></i></a></li>
+                <li class="active"><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href="">5</a></li>
+                <li><a href=""><i class="zmdi zmdi-long-arrow-right"></i></a></li>
+            </ul>
         </div>
     </div>
 </div>
