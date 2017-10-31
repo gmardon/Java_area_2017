@@ -1,3 +1,1 @@
-<form action="/connect/twitter" method="POST">
-    <button class="btn btn-default btn-primary" type="submit">Connect to Twitter</button>
-</form>
+<meta http-equiv="refresh" content="0; url=http://localhost:8080/connect" />

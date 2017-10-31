@@ -10,11 +10,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class AuthController {
+public class AuthenticationController {
     @Autowired
     private UserService userService;
 
@@ -30,7 +31,12 @@ public class AuthController {
 
         return "register";
     }
-
+/*
+    @RequestMapping(value = "/connect/{provider}", method = RequestMethod.GET)
+    public String register(@PathVariable("provider") String provider, Model model) {
+        return "redirect:/connect";
+    }
+*/
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String register(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
         userValidator.validate(userForm, bindingResult);

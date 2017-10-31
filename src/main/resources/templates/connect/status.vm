@@ -1,5 +1,5 @@
 <div class="card widget-profile">
-    <div class="card__header card__header--highlight text-center">
+    <div class="card__header text-center">
         <h2>Connect with some social network</h2>
     </div>
 
@@ -9,27 +9,14 @@
                 <div class="avatar-char"><i class="zmdi zmdi-twitter"></i></div>
             </div>
             <div class="media-body">
+                #if($connectionMap.containsKey("twitter"))
+                    <p>Twitter is already connected to this account</p>
+                #else
                 <form action="/connect/twitter" method="POST">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     <button class="btn btn-default btn-primary" type="submit">Connect to Twitter</button>
                 </form>
-            </div>
-        </div>
-        <div class="list-group-item media">
-            <div class="pull-left">
-                <div class="avatar-char"><i class="zmdi zmdi-phone"></i></div>
-            </div>
-            <div class="media-body">
-                <div class="list-group__heading">011 55694785</div>
-                <small class="list-group__text">Home</small>
-            </div>
-        </div>
-        <div class="list-group-item media">
-            <div class="pull-left">
-                <div class="avatar-char"><i class="zmdi zmdi-email"></i></div>
-            </div>
-            <div class="media-body">
-                <div class="list-group__heading">m-hollaway@gmail.com</div>
-                <small class="list-group__text">Email</small>
+                #end
             </div>
         </div>
         <div class="list-group-item media">
@@ -37,9 +24,14 @@
                 <div class="avatar-char"><i class="zmdi zmdi-facebook"></i></div>
             </div>
             <div class="media-body">
+                #if($connectionMap.containsKey("facebook"))
+                    <p>Facebook is already connected to this account</p>
+                #else
                 <form action="/connect/facebook" method="POST">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     <button class="btn btn-default btn-primary" type="submit">Connect to Facebook</button>
                 </form>
+                #end
             </div>
         </div>
         <div class="list-group-item media">
@@ -47,8 +39,14 @@
                 <div class="avatar-char"><i class="zmdi zmdi-github"></i></div>
             </div>
             <div class="media-body">
-                <div class="list-group__heading">github.com/hollaway</div>
-                <small class="list-group__text">Github</small>
+                #if($connectionMap.containsKey("github"))
+                    <p>Github is already connected to this account</p>
+                #else
+                <form action="/connect/github" method="POST">
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    <button class="btn btn-default btn-primary" type="submit">Connect to Github</button>
+                </form>
+                #end
             </div>
         </div>
     </div>
