@@ -1,12 +1,10 @@
 package eu.epitech.area.service;
 
 import eu.epitech.area.User;
-import eu.epitech.area.UserRepository;
+import eu.epitech.area.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.HashSet;
 
 @Service
 public class UserServiceImpl implements UserService {

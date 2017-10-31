@@ -1,21 +1,16 @@
-package eu.epitech.area.action;
+package eu.epitech.area.reaction;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "action")
-public abstract class Action implements Serializable {
+@Table(name = "reaction")
+public abstract class Reaction implements Serializable {
     @Id
     private Long id;
     protected String name;
-    protected String[] params;
-    abstract boolean check();
 
-    public Action(String name, String[] params) {
-        this.name = name;
-        this.params = params;
-    }
+    abstract void execute(String[] args);
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,13 +28,5 @@ public abstract class Action implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String[] getParams() {
-        return params;
-    }
-
-    public void setParams(String[] params) {
-        this.params = params;
     }
 }

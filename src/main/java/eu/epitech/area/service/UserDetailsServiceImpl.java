@@ -1,10 +1,9 @@
 package eu.epitech.area.service;
 
 import eu.epitech.area.User;
-import eu.epitech.area.UserRepository;
+import eu.epitech.area.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
