@@ -9,6 +9,11 @@ public abstract class Reaction implements Serializable {
     @Id
     private Long id;
     protected String name;
+    protected String[] params;
+
+    public Reaction(String name) {
+        this.name = name;
+    }
 
     abstract void execute(String[] args);
 

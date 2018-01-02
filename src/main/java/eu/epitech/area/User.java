@@ -1,10 +1,11 @@
 package eu.epitech.area;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "user")
-public class User {
+public class User implements Serializable {
     @Id
     private Long id;
     private String username;

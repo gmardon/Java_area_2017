@@ -14,7 +14,6 @@
         </div>
     </div>
 </div>
-
 <div class="card">
     <div class="card__body">
         <form action="/link/create" method="POST">
@@ -23,12 +22,12 @@
                     <p>Action</p>
 
                     <div class="form-group form-group--select">
-                        <select class="form-control">
-                            <option>TweetOnHashtagAction</option>
+                        <select class="form-control" name="action.name">
+                            <option value="TweetOnHashtagAction">TweetOnHashtagAction</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" rows="5" placeholder="Parameters for this action"></textarea>
+                        <textarea class="form-control" rows="5" name="action.params" placeholder="Parameters for this action"></textarea>
                         <i class="form-group__bar"></i>
                     </div>
                 </div>
@@ -37,12 +36,12 @@
                     <p>Reaction</p>
 
                     <div class="form-group form-group--select">
-                        <select class="form-control">
-                            <option>Sample REACTION</option>
+                        <select class="form-control" name="reaction.name">
+                            <option value="SimpleOutputReaction">SimpleOutputReaction</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" rows="5" placeholder="Parameters for this reaction"></textarea>
+                        <textarea name="reaction.params" class="form-control" rows="5" placeholder="Parameters for this reaction"></textarea>
                         <i class="form-group__bar"></i>
                     </div>
                 </div>

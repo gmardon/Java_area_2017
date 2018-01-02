@@ -2,7 +2,11 @@
 
 <div class="page-error">
     <div class="page-error__inner">
-        <h3>${error}</h3>
-        <p>${message}</p>
+        <h5>${exception.message}</h5>
+            <textarea readonly style="width: 400px;height: 200px;background: transparent;border: none;font-size: 10px;margin-left: -50px;margin-right: -40px;margin-bottom: -49px;">
+            #foreach($item in $exception.stackTrace)
+                $item
+            #end
+            </textarea>
     </div>
 </div>

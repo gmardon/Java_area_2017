@@ -5,8 +5,10 @@ import org.springframework.social.twitter.api.SearchParameters;
 import org.springframework.social.twitter.api.Tweet;
 import org.springframework.social.twitter.api.Twitter;
 
+import javax.persistence.Entity;
 import java.util.List;
 
+@Entity
 public class TweetOnHashtagAction extends Action {
     @Autowired
     private Twitter twitter;
