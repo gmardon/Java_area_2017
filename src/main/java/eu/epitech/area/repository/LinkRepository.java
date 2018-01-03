@@ -8,7 +8,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface LinkRepository extends JpaRepository<Link, Long> {
-
-    @Query("SELECT link FROM Link link INNER JOIN link.author author where author.id = :userId")
-    public List<Link> findByAuthor(@Param("userId") long userId);
+    @Query("SELECT link FROM Link link where link.author.id = ?1")
+    public List<Link> findByAuthor(long userId);
 }

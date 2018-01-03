@@ -47,13 +47,16 @@ public class ActionProcessingThread extends Thread {
                 factory.autowireBean(link.getAction());
                 factory.autowireBean(link.getReaction());
                 System.out.println("Processing link...");
-                link.process();
-            }
-            System.out.println("ActionProcessingThread is sleeping...");
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                try {
+                    link.process();
+                } catch (Exception exception) {
+                    System.err.println(exception.getMessage());
+                }
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
