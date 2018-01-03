@@ -2,6 +2,7 @@ package eu.epitech.area.reaction;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.function.Consumer;
 
 @Entity
 @Table(name = "reaction")
@@ -15,7 +16,7 @@ public abstract class Reaction implements Serializable {
         this.name = name;
     }
 
-    abstract void execute(String[] args);
+    public abstract Consumer<String[]> consumer();
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

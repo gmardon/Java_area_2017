@@ -1,12 +1,12 @@
 package eu.epitech.area.action;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.social.twitter.api.SearchParameters;
 import org.springframework.social.twitter.api.Tweet;
 import org.springframework.social.twitter.api.Twitter;
 
 import javax.persistence.Entity;
 import java.util.List;
+import java.util.function.Consumer;
 
 @Entity
 public class TweetOnHashtagAction extends Action {
@@ -22,12 +22,17 @@ public class TweetOnHashtagAction extends Action {
     }
 
     @Override
-    boolean check() {
+    public void apply(Consumer<String[]> function) {
         List<Tweet> tweets = twitter.searchOperations().search("#" + params[0]).getTweets();
         if (lastTweets == null) {
             lastTweets = tweets;
-            return false;
+            return;
         }
-        return !(lastTweets.equals(tweets));
+        tweets.removeAll(lastTweets);
+        for (Tweet tweet: tweets) {
+            String[] params = {tweet.getText()};
+            function.accept(params);
+            lastTweets.add(tweet);
+        }
     }
 }

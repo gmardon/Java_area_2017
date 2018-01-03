@@ -36,6 +36,10 @@ public class Link implements Serializable {
         this.author = author;
     }
 
+    public void process() {
+        action.apply(reaction.consumer());
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Long getId() {

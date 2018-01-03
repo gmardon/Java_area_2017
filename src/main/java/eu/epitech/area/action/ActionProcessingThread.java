@@ -3,8 +3,11 @@ package eu.epitech.area.action;
 import eu.epitech.area.Link;
 import eu.epitech.area.service.LinkService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -12,16 +15,46 @@ public class ActionProcessingThread extends Thread {
     @Autowired
     LinkService linkService;
 
+    @Autowired
+    ApplicationContext applicationContext;
+
+    public ActionProcessingThread() {
+        this.start();
+    }
+
     @Override
     public void run() {
-        List<Link> links = linkService.getAll();
-        System.out.println(getName() + " is running");
-        System.out.println(getName() + " is sleeping...");
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        List<Link> links = new ArrayList<Link>();
+        while (this.isAlive()) {
+            if (this.linkService == null)
+                continue;
+            if (links.size() == 0)
+                links = linkService.getAll();
+            else {
+                List<Link> newLinks = linkService.getAll();
+                for (int i = 0; i < newLinks.size(); i++) {
+                    Link link = newLinks.get(i);
+                    if (links.stream().anyMatch((l) -> l.getId() == link.getId())) {
+                        newLinks.remove(newLinks.get(i));
+                    }
+                }
+                links.addAll(newLinks);
+            }
+            System.out.println("ActionProcessingThread is running");
+            for (Link link : links) {
+                AutowireCapableBeanFactory factory = applicationContext.getAutowireCapableBeanFactory();
+                factory.autowireBean(link);
+                factory.autowireBean(link.getAction());
+                factory.autowireBean(link.getReaction());
+                System.out.println("Processing link...");
+                link.process();
+            }
+            System.out.println("ActionProcessingThread is sleeping...");
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
-
     }
 }

@@ -35,9 +35,13 @@ import org.springframework.social.connect.ConnectionRepository;
 import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository;
 import org.springframework.social.connect.support.ConnectionFactoryRegistry;
+import org.springframework.social.connect.web.ConnectController;
 import org.springframework.social.facebook.connect.FacebookConnectionFactory;
 import org.springframework.social.github.connect.GitHubConnectionFactory;
+import org.springframework.social.twitter.api.Twitter;
+import org.springframework.social.twitter.api.impl.TwitterTemplate;
 import org.springframework.social.twitter.connect.TwitterConnectionFactory;
+import org.springframework.web.context.request.RequestContextListener;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -61,6 +65,7 @@ public class SocialConfig extends SocialConfigurerAdapter {
     private Environment environment;
 
     @Bean
+    @Scope(value="session", proxyMode=ScopedProxyMode.INTERFACES)
     public ConnectionFactoryLocator connectionFactoryLocator() {
         ConnectionFactoryRegistry registry = new ConnectionFactoryRegistry();
 
@@ -85,6 +90,13 @@ public class SocialConfig extends SocialConfigurerAdapter {
     }
 
     @Bean
+    public Twitter twitter() {
+        String appId = environment.getProperty("spring.social.twitter.appId");
+        String appSecret = environment.getProperty("spring.social.twitter.appSecret");
+        return new TwitterTemplate(appId,appSecret);
+    }
+
+    @Bean
     public UsersConnectionRepository usersConnectionRepository() {
         return new JdbcUsersConnectionRepository(dataSource, connectionFactoryLocator(), textEncryptor());
     }
@@ -97,5 +109,12 @@ public class SocialConfig extends SocialConfigurerAdapter {
             throw new IllegalStateException("Unable to get a ConnectionRepository: no user signed in");
         }
         return usersConnectionRepository().createConnectionRepository(authentication.getName());
+    }
+
+    @Bean
+    public ConnectController connectController() {
+        ConnectController controller = new ConnectController(
+                connectionFactoryLocator(), connectionRepository());
+        return controller;
     }
 }

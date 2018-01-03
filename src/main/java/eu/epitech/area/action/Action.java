@@ -2,6 +2,8 @@ package eu.epitech.area.action;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 @Entity
 @Table(name = "action")
@@ -10,7 +12,7 @@ public abstract class Action implements Serializable {
     private Long id;
     protected String name;
     protected String[] params;
-    abstract boolean check();
+    public abstract void apply(Consumer<String[]> callback);
 
     public Action(String name, String[] params) {
         this.name = name;
