@@ -1,6 +1,6 @@
 package eu.epitech.area.validator;
 
-import eu.epitech.area.User;
+import eu.epitech.area.security.User;
 import eu.epitech.area.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -1,6 +1,6 @@
 package eu.epitech.area;
 
-import eu.epitech.area.action.ActionProcessingThread;
+import eu.epitech.area.link.LinkProcessingThread;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -19,7 +19,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class Application
 {
     @Autowired
-    ActionProcessingThread actionProcessingThread;
+    LinkProcessingThread actionProcessingThread;
 
     public static void main(String[] args)
     {

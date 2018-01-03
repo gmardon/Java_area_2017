@@ -1,6 +1,6 @@
 package eu.epitech.area.repository;
 
-import eu.epitech.area.User;
+import eu.epitech.area.security.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

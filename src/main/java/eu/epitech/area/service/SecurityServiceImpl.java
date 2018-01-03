@@ -1,6 +1,6 @@
 package eu.epitech.area.service;
 
-import eu.epitech.area.User;
+import eu.epitech.area.security.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

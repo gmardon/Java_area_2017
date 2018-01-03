@@ -1,5 +1,6 @@
-package eu.epitech.area;
+package eu.epitech.area.link;
 
+import eu.epitech.area.security.User;
 import eu.epitech.area.action.Action;
 import eu.epitech.area.reaction.Reaction;
 
@@ -36,8 +37,8 @@ public class Link implements Serializable {
         this.author = author;
     }
 
-    public void process() {
-        action.apply(reaction.consumer());
+    public void apply() {
+        action.apply(reaction);
     }
 
     @Id

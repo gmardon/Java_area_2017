@@ -2,6 +2,7 @@ package eu.epitech.area.reaction;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Formatter;
 import java.util.function.Consumer;
 
 @Entity
@@ -16,7 +17,17 @@ public abstract class Reaction implements Serializable {
         this.name = name;
     }
 
-    public abstract Consumer<String[]> consumer();
+    public void apply(String[] actionResultParams) {
+        String[] params = this.params.clone();
+        for (int i = 0; i < params.length; i++) {
+            Formatter formatter = new Formatter();
+            params[i] = formatter.format(params[i], actionResultParams).toString();
+            formatter.close();
+        }
+        consumer().accept(params);
+    }
+
+    protected abstract Consumer<String[]> consumer();
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

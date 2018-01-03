@@ -1,4 +1,4 @@
-package eu.epitech.area;
+package eu.epitech.area.security;
 
 import javax.persistence.*;
 import java.io.Serializable;

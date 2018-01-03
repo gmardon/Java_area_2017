@@ -1,6 +1,5 @@
-package eu.epitech.area.action;
+package eu.epitech.area.link;
 
-import eu.epitech.area.Link;
 import eu.epitech.area.service.LinkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.AutowireCapableBeanFactory;
@@ -11,14 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class ActionProcessingThread extends Thread {
+public class LinkProcessingThread extends Thread {
     @Autowired
     LinkService linkService;
 
     @Autowired
     ApplicationContext applicationContext;
 
-    public ActionProcessingThread() {
+    public LinkProcessingThread() {
         this.start();
     }
 
@@ -48,7 +47,7 @@ public class ActionProcessingThread extends Thread {
                 factory.autowireBean(link.getReaction());
                 System.out.println("Processing link...");
                 try {
-                    link.process();
+                    link.apply();
                 } catch (Exception exception) {
                     System.err.println(exception.getMessage());
                 }

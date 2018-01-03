@@ -1,7 +1,7 @@
 package eu.epitech.area.service;
 
-import eu.epitech.area.Link;
-import eu.epitech.area.User;
+import eu.epitech.area.link.Link;
+import eu.epitech.area.security.User;
 
 import java.util.List;
 

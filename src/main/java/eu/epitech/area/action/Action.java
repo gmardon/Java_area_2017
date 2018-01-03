@@ -1,5 +1,7 @@
 package eu.epitech.area.action;
 
+import eu.epitech.area.reaction.Reaction;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.function.Consumer;
@@ -12,7 +14,7 @@ public abstract class Action implements Serializable {
     private Long id;
     protected String name;
     protected String[] params;
-    public abstract void apply(Consumer<String[]> callback);
+    public abstract void apply(Reaction reaction);
 
     public Action(String name, String[] params) {
         this.name = name;

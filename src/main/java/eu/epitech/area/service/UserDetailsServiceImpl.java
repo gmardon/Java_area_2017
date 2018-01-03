@@ -1,6 +1,6 @@
 package eu.epitech.area.service;
 
-import eu.epitech.area.User;
+import eu.epitech.area.security.User;
 import eu.epitech.area.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
