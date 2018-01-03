@@ -57,4 +57,9 @@ public class LinkServiceImpl implements LinkService {
     public List<Link> getAll() {
         return linkRepository.findAll();
     }
+
+    @Override
+    public List<Link> getAllFromUser(User user) {
+        return linkRepository.findByAuthor(user.getId());
+    }
 }

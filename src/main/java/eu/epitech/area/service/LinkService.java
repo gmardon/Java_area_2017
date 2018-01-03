@@ -15,4 +15,5 @@ public interface LinkService {
     void create(Link link);
 
     List<Link> getAll();
+    List<Link> getAllFromUser(User user);
 }

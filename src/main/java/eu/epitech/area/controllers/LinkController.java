@@ -1,7 +1,5 @@
 package eu.epitech.area.controllers;
 
-import eu.epitech.area.Link;
-import eu.epitech.area.repository.LinkRepository;
 import eu.epitech.area.service.LinkService;
 import eu.epitech.area.service.SecurityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +21,7 @@ public class LinkController {
 
     @RequestMapping("/links")
     public String links(Model model) {
+        model.addAttribute("links", linkService.getAllFromUser(securityService.getLoggedUser()));
         return "links";
     }
 
