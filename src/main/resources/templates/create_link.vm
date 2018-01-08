@@ -38,6 +38,7 @@
                     <div class="form-group form-group--select">
                         <select class="form-control" name="reaction.name">
                             <option value="SimpleOutputReaction">SimpleOutputReaction</option>
+                            <option value="TweetReaction">TweetReaction</option>
                         </select>
                     </div>
                     <div class="form-group">
