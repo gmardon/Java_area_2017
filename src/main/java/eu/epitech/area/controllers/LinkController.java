@@ -33,7 +33,7 @@ public class LinkController {
     @RequestMapping(value = "/link/create", method = RequestMethod.POST)
     public String create_link(@RequestParam Map<String,String> params, Model model) {
         linkService.create(params.get("action.name"),
-                            params.get("action.params").split("\n"),
+                params.get("action.params").split("\n"),
                 params.get("reaction.name"),
                 params.get("reaction.params").split("\n"),
                 securityService.getLoggedUser());

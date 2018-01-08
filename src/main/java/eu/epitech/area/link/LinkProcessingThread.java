@@ -57,6 +57,7 @@ public class LinkProcessingThread extends Thread {
                     e.printStackTrace();
                 }
             }
+            try { Thread.sleep(5000); } catch (InterruptedException e) { e.printStackTrace(); }
         }
     }
 }
