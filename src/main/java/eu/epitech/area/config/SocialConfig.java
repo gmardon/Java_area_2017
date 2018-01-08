@@ -16,12 +16,14 @@ package eu.epitech.area.config;
  * limitations under the License.
  */
 
+import eu.epitech.area.security.JdbcUsersConnectionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.core.env.Environment;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -33,7 +35,6 @@ import org.springframework.social.config.annotation.SocialConfigurerAdapter;
 import org.springframework.social.connect.ConnectionFactoryLocator;
 import org.springframework.social.connect.ConnectionRepository;
 import org.springframework.social.connect.UsersConnectionRepository;
-import org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository;
 import org.springframework.social.connect.support.ConnectionFactoryRegistry;
 import org.springframework.social.connect.web.ConnectController;
 import org.springframework.social.facebook.connect.FacebookConnectionFactory;
@@ -54,6 +55,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @EnableSocial
+@EnableGlobalMethodSecurity(proxyTargetClass = false)
 public class SocialConfig extends SocialConfigurerAdapter {
     @Inject
     private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -65,7 +67,6 @@ public class SocialConfig extends SocialConfigurerAdapter {
     private Environment environment;
 
     @Bean
-    @Scope(value="session", proxyMode=ScopedProxyMode.INTERFACES)
     public ConnectionFactoryLocator connectionFactoryLocator() {
         ConnectionFactoryRegistry registry = new ConnectionFactoryRegistry();
 
