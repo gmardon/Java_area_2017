@@ -38,7 +38,7 @@ public class Link implements Serializable {
     }
 
     public void apply() {
-        action.apply(reaction);
+        action.apply(author, reaction);
     }
 
     @Id

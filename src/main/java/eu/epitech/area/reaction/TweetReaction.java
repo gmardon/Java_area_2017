@@ -1,26 +1,27 @@
 package eu.epitech.area.reaction;
 
-import org.apache.logging.log4j.core.tools.picocli.CommandLine;
-import org.springframework.beans.factory.annotation.Autowired;
+import eu.epitech.area.security.User;
 import org.springframework.social.twitter.api.Twitter;
 
 import javax.persistence.Entity;
-import java.util.function.Consumer;
+import java.util.function.BiConsumer;
 
 @Entity
 public class TweetReaction extends Reaction {
-    @Autowired
-    Twitter twitter;
-
-    public TweetReaction() {
-        super("TweetReaction");
+    public TweetReaction(String[] params) {
+        super("TweetReaction", params);
     }
 
     @Override
-    public Consumer<String[]> consumer() {
-        return (params) -> {
+    public BiConsumer<User, String[]> consumer() {
+        return (author, params) -> {
             if (params.length > 0)
+            {
+                Twitter twitter = getConnection(author, Twitter.class);
+                if (twitter == null)
+                    System.err.println("User not connected to twitter");
                 twitter.timelineOperations().updateStatus(params[0]);
+            }
             else
                 System.err.println("Missing parameter needed to tweet");
         };

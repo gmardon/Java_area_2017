@@ -26,15 +26,9 @@ public class AuthenticationController {
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String register(Model model) {
         model.addAttribute("userForm", new User());
-
         return "register";
     }
-/*
-    @RequestMapping(value = "/connect/{provider}", method = RequestMethod.GET)
-    public String register(@PathVariable("provider") String provider, Model model) {
-        return "redirect:/connect";
-    }
-*/
+
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String register(@ModelAttribute("userForm") User userForm, BindingResult bindingResult, Model model) {
         userValidator.validate(userForm, bindingResult);

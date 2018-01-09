@@ -28,6 +28,7 @@
                 #foreach($error in $errors)
                     <span class="help-block">${error}</span>
                 #end
+                <span class="help-block"><a style="color: #b3bec2a3;" href="/login">Already registered ?</a></span>
                 <button class="btn btn--light btn--icon m-t-15"><i class="zmdi zmdi-plus"></i></button>
             </div>
         </form>

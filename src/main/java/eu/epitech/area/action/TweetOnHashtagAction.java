@@ -1,19 +1,15 @@
 package eu.epitech.area.action;
 
 import eu.epitech.area.reaction.Reaction;
-import org.springframework.beans.factory.annotation.Autowired;
+import eu.epitech.area.security.User;
 import org.springframework.social.twitter.api.Tweet;
 import org.springframework.social.twitter.api.Twitter;
 
 import javax.persistence.Entity;
 import java.util.List;
-import java.util.function.Consumer;
 
 @Entity
 public class TweetOnHashtagAction extends Action {
-    @Autowired
-    private Twitter twitter;
-
     private List<Tweet> lastTweets;
 
     public TweetOnHashtagAction(String[] params) {
@@ -23,16 +19,17 @@ public class TweetOnHashtagAction extends Action {
     }
 
     @Override
-    public void apply(Reaction reaction) {
+    public void apply(User author, Reaction reaction) {
+        Twitter twitter = getConnection(author, Twitter.class);
         List<Tweet> tweets = twitter.searchOperations().search("#" + params[0]).getTweets();
         if (lastTweets == null) {
             lastTweets = tweets;
             return;
         }
         tweets.removeAll(lastTweets);
-        for (Tweet tweet: tweets) {
+        for (Tweet tweet : tweets) {
             String[] params = {tweet.getText(), String.valueOf(tweet.getId()), tweet.getFromUser()};
-            reaction.apply(params);
+            reaction.apply(author, params);
             lastTweets.add(tweet);
         }
     }

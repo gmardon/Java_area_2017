@@ -49,7 +49,7 @@ public class LinkProcessingThread extends Thread {
                 try {
                     link.apply();
                 } catch (Exception exception) {
-                    System.err.println(exception.getMessage());
+                    exception.printStackTrace();
                 }
                 try {
                     Thread.sleep(5000);

@@ -1,6 +1,7 @@
 package eu.epitech.area.service;
 
 import eu.epitech.area.link.Link;
+import eu.epitech.area.reaction.TweetReaction;
 import eu.epitech.area.security.User;
 import eu.epitech.area.action.Action;
 import eu.epitech.area.action.TweetOnHashtagAction;
@@ -39,7 +40,11 @@ public class LinkServiceImpl implements LinkService {
         Reaction reaction = null;
         switch (reactionName) {
             case "SimpleOutputReaction":
-                reaction = new SimpleOutputReaction();
+                reaction = new SimpleOutputReaction(reactionParams);
+                break;
+
+            case "TweetReaction":
+                reaction = new TweetReaction(reactionParams);
                 break;
         }
         reactionRepository.save(reaction);

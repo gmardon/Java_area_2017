@@ -1,17 +1,19 @@
 package eu.epitech.area.reaction;
 
+import eu.epitech.area.security.User;
+
 import javax.persistence.Entity;
-import java.util.function.Consumer;
+import java.util.function.BiConsumer;
 
 @Entity
 public class SimpleOutputReaction extends Reaction {
-    public SimpleOutputReaction() {
-        super("SimpleOutputReaction");
+    public SimpleOutputReaction(String[] params) {
+        super("SimpleOutputReaction", params);
     }
 
     @Override
-    public Consumer<String[]> consumer() {
-        return (params) -> {
+    public BiConsumer<User, String[]> consumer() {
+        return (user, params) -> {
             if (params.length > 0)
                 System.out.println("[SimpleOutputReaction] " + params[0]);
         };

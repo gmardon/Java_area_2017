@@ -1,5 +1,6 @@
 package eu.epitech.area.service;
 
+import eu.epitech.area.security.SecurityContext;
 import eu.epitech.area.security.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,6 +46,7 @@ public class SecurityServiceImpl implements SecurityService {
 
         if (usernamePasswordAuthenticationToken.isAuthenticated()) {
             SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+            SecurityContext.setCurrentUser(userService.findByUsername(username));
             logger.debug(String.format("Auto login %s successfully!", username));
         }
     }

@@ -37,6 +37,6 @@ public class LinkController {
                 params.get("reaction.name"),
                 params.get("reaction.params").split("\n"),
                 securityService.getLoggedUser());
-        return "links";
+        return "redirect:/links";
     }
 }

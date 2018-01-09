@@ -1,22 +1,9 @@
 package eu.epitech.area.config;
 
-/*
- * Copyright 2014 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 import eu.epitech.area.security.JdbcUsersConnectionRepository;
+import eu.epitech.area.security.SecurityContext;
+import eu.epitech.area.security.User;
+import eu.epitech.area.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +13,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.encrypt.Encryptors;
 import org.springframework.security.crypto.encrypt.TextEncryptor;
@@ -37,6 +25,7 @@ import org.springframework.social.connect.ConnectionRepository;
 import org.springframework.social.connect.UsersConnectionRepository;
 import org.springframework.social.connect.support.ConnectionFactoryRegistry;
 import org.springframework.social.connect.web.ConnectController;
+import org.springframework.social.facebook.api.Facebook;
 import org.springframework.social.facebook.connect.FacebookConnectionFactory;
 import org.springframework.social.github.connect.GitHubConnectionFactory;
 import org.springframework.social.twitter.api.Twitter;
@@ -48,11 +37,6 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.sql.DataSource;
 
-/**
- * Spring Social Configuration.
- *
- * @author Craig Walls
- */
 @Configuration
 @EnableSocial
 @EnableGlobalMethodSecurity(proxyTargetClass = false)
@@ -60,11 +44,14 @@ public class SocialConfig extends SocialConfigurerAdapter {
     @Inject
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    @Autowired
+    @Inject
     private DataSource dataSource;
 
     @Autowired
     private Environment environment;
+
+    @Autowired
+    private UserService userService;
 
     @Bean
     public ConnectionFactoryLocator connectionFactoryLocator() {
@@ -91,16 +78,16 @@ public class SocialConfig extends SocialConfigurerAdapter {
     }
 
     @Bean
+    @Scope(value = "request", proxyMode = ScopedProxyMode.INTERFACES)
     public Twitter twitter() {
-        String appId = environment.getProperty("spring.social.twitter.appId");
-        String appSecret = environment.getProperty("spring.social.twitter.appSecret");
-        return new TwitterTemplate(appId,appSecret);
+        return connectionRepository().getPrimaryConnection(Twitter.class).getApi();
     }
 
     @Bean
     public UsersConnectionRepository usersConnectionRepository() {
         return new JdbcUsersConnectionRepository(dataSource, connectionFactoryLocator(), textEncryptor());
     }
+
 
     @Bean
     @Scope(value = "request", proxyMode = ScopedProxyMode.INTERFACES)
