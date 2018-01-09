@@ -1,6 +1,7 @@
 package eu.epitech.area.service;
 
 import eu.epitech.area.action.GithubOnCommitAction;
+import eu.epitech.area.action.GithubOnDownloadAction;
 import eu.epitech.area.link.Link;
 import eu.epitech.area.reaction.TweetReaction;
 import eu.epitech.area.security.User;
@@ -38,6 +39,10 @@ public class LinkServiceImpl implements LinkService {
 
             case "GithubOnCommitAction":
                 action = new GithubOnCommitAction(actionParams);
+                break;
+
+            case "GithubOnDownloadAction":
+                action = new GithubOnDownloadAction(actionParams);
                 break;
         }
         actionRepository.save(action);
