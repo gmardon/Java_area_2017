@@ -9,13 +9,18 @@
                 <div class="avatar-char"><i class="zmdi zmdi-twitter"></i></div>
             </div>
             <div class="media-body">
-                #if($connectionMap.containsKey("twitter"))
+                #if($connectionMap["twitter"].size() != 0)
                     <p>Twitter is already connected to this account</p>
+                    <form action="/connect/twitter" method="post">
+                        <button class="btn btn-default btn-primary" type="submit">Disconnect</button>
+                        <input type="hidden" name="_method" value="delete"/>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    </form>
                 #else
-                <form action="/connect/twitter" method="POST">
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                    <button class="btn btn-default btn-primary" type="submit">Connect to Twitter</button>
-                </form>
+                    <form action="/connect/twitter" method="POST">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        <button class="btn btn-default btn-primary" type="submit">Connect to Twitter</button>
+                    </form>
                 #end
             </div>
         </div>
@@ -24,13 +29,18 @@
                 <div class="avatar-char"><i class="zmdi zmdi-facebook"></i></div>
             </div>
             <div class="media-body">
-                #if($connectionMap.containsKey("facebook"))
+                #if($connectionMap["facebook"].size() != 0)
                     <p>Facebook is already connected to this account</p>
+                    <form action="/connect/facebook" method="post">
+                        <button class="btn btn-default btn-primary" type="submit">Disconnect</button>
+                        <input type="hidden" name="_method" value="delete"/>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    </form>
                 #else
-                <form action="/connect/facebook" method="POST">
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                    <button class="btn btn-default btn-primary" type="submit">Connect to Facebook</button>
-                </form>
+                    <form action="/connect/facebook" method="POST">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        <button class="btn btn-default btn-primary" type="submit">Connect to Facebook</button>
+                    </form>
                 #end
             </div>
         </div>
@@ -39,13 +49,18 @@
                 <div class="avatar-char"><i class="zmdi zmdi-github"></i></div>
             </div>
             <div class="media-body">
-                #if($connectionMap.containsKey("github"))
+                #if($connectionMap["github"].size() != 0)
                     <p>Github is already connected to this account</p>
+                    <form action="/connect/github" method="post">
+                        <button class="btn btn-default btn-primary" type="submit">Disconnect</button>
+                        <input type="hidden" name="_method" value="delete"/>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    </form>
                 #else
-                <form action="/connect/github" method="POST">
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                    <button class="btn btn-default btn-primary" type="submit">Connect to Github</button>
-                </form>
+                    <form action="/connect/github" method="POST">
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        <button class="btn btn-default btn-primary" type="submit">Connect to Github</button>
+                    </form>
                 #end
             </div>
         </div>
